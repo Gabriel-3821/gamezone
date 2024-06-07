@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+        <link rel="icon" href="Img/Logo.jpeg" type="image/jpeg">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->
+
+  <style>
+   
+      body {
+        background-image: url('./Img/fondo.jpeg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center ;
+        background-size:cover;
+      }
+      
+      .lab {
+         color: rgb(255, 255, 255);
+         font-weight: bold;
+         font-family: Georgia, serif;
+         font-size: 100%;
+      }
+      .lab1{
+        color: rgb(255, 255, 255);
+         font-weight: bold;
+         font-family: Georgia, serif;
+         font-size: 80%;
+      }
+
+      .h1 {
+         color: rgb(255, 255, 255);
+         font-weight: bold;
+         font-family: Georgia, serif;
+         font-size:350%;
+      }
+      .button {
+        background-color: rgb(105, 72, 148);
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        font-family: Georgia, serif;
+        font-size:120%;
+        border-radius: 20px;
+        width: 100px;
+        height: 40px;
+
+        position:relative;
+        display: flex;
+        align-items:center;
+        justify-content:center;
+        position:absolute;
+        right: 0;
+        left: 0;
+        margin:auto;
+      }
+      
+      a{
+        color: rgb(254, 253, 253);
+      }
+
+      #miForm{
+        width: 400px;
+        height: 550px;
+        border-radius: 25px;
+        background-color: rgba(88, 88, 90, 0.89);
+        padding: 25px;
+        position:relative;
+        
+        display: flex;
+        align-items:center;
+        justify-content:center;
+        position:absolute;
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+      
+    </style>
+
+</head>
+<body>
+  
+  <div id="miForm">
+    <form id="loginForm" onsubmit="return validarFormulario(event)">
+    <label class="h1">Login</label><br></br><div></div>
+    <label for="name" class="lab">Ingrese su nombre:</label><div></div>
+    <input name="name" value="" placeholder="Nombre" id="name" required><br></br>
+
+    <label for="mail" class="lab">Ingrese su mail:</label><div></div>
+    <input name="mail" value="" placeholder="Ejemplo@mail.com" id="email" required><br></br>
+
+    <label for="contraseña" class="lab">Ingrese su contraseña:</label><div></div>
+    <input name="contraseña" type="password" placeholder="Contraseña" id="contraseña" required><br></br>
+
+    <label for="remember" class="lab1">Recordar mi dispositivo</label>
+    <input name="remember" id="remember" type="checkbox"><br></br>
+
+    <label for="noCuenta" class="lab1">No tienes cuenta?<a href="">Registrate</a></label><div></div>
+
+    <br>
+
+    <label for="contra" class="lab"><a href="">Olvidaste tu contraseña?</a></label><br></br>
+
+    <button type='submit' class="button">Iniciar</button>
+  </form>
+</div>
+<div id="mensaje"></div>
+<script>
+function validarFormulario(event) {
+  event.preventDefault(); // Prevenir el envío del formulario
+
+  // Obtener los valores de los campos de entrada
+  const mail = document.getElementById('email').value;
+  const contraseña = document.getElementById('contraseña').value;
+
+  // Valores correctos predefinidos
+  const correcMail = 'hola@gmail.com';
+  const correcContraseña = '123456';
+
+  // Comprobar si los valores ingresados coinciden con los valores correctos
+  if (mail === correcMail && contraseña === correcContraseña) {
+      window.location.href= "./inicio/inicio.html";
+  } else {
+      console.log('Información incorrecta');
+  }
+}
+</script>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+
+    
+ 
+
+</body>
+</html>

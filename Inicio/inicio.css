@@ -1,0 +1,278 @@
+/* Estilos generales */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilos del encabezado */
+
+header {
+    background-image: url(../Img/fondo.jpeg);
+    color: #fff;
+    padding: 20px 0;
+    width: 100%;
+}
+
+header .container {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+header h1 {
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-right: 20px;
+    color:#fff;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Pseudo-clase para cambiar el color del enlace al pasar el ratón */
+header nav ul li a:hover {
+    color: #e74c3c;
+}
+
+/* Estilos del contenido principal */
+
+main {
+    flex: 1;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.destacados, .catalogo {
+    margin-bottom: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.destacados h2, .catalogo h2 {
+    color: #333;
+    width: 100%;
+    text-align: center;
+}
+
+/* Estilos de las tarjetas de productos */
+
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+}
+
+.producto {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    flex: 1 1 calc(33.333% - 20px);
+    box-sizing: border-box;
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Pseudo-clase para aumentar el tamaño de la tarjeta y agregar sombra al pasar el ratón */
+.producto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.producto img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.producto h3 {
+    margin: 10px 0;
+}
+
+
+
+.producto p {
+    margin: 10px 0;
+}
+
+.producto .precio {
+    font-weight: bold;
+    color: #030303;
+}
+
+.producto button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Pseudo-clase para cambiar el color de fondo del botón al pasar el ratón */
+.producto button:hover {
+    background-color: #e50b0b;
+}
+
+/* Estilos del pie de página */
+
+footer {
+    
+    background-image: url(Img/fondo.jpeg);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer p {
+    margin: 0;
+    padding: 0;
+}
+
+footer nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+footer nav ul li {
+    margin-right: 20px;
+}
+
+footer nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Pseudo-clase para cambiar el color del enlace al pasar el ratón */
+footer nav ul li a:hover {
+    color: #3ce77e;
+}
+
+/* Media Queries para hacer la página responsive */
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    footer nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer nav ul li {
+        margin: 10px 0;
+    }
+
+    .producto {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        text-align: center;
+    }
+
+    footer nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer nav ul li {
+        text-align: center;
+    }
+
+    .producto {
+        flex: 1 1 100%;
+    }
+}
+
+.image-container {
+    text-align: center;
+}
+
+
+.image-container img {
+    max-width: 50%; 
+    height: auto;   
+
+}
+
+@keyframes miAnimacion {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.image-container {
+    animation: miAnimacion 1s ease-in-out forwards;
+}
+
+
+ 
+
